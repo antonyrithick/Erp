@@ -1,17 +1,11 @@
 const Sequelize = require("sequelize");
 
 require("dotenv").config();
-
-const sequelize = new Sequelize(
-  process.env.DB_NAME,
-  process.env.DB_USER,
-  process.env.DB_PASSWORD,
-  {
-    host: process.env.DB_HOST,
-    dialect: "mysql",
+const sequelize = new Sequelize('bhqwtlwhr9la38iz8smi', 'uaprqecbissc4pr4', 'vGIkdhqn5KjKTps1gaJP', {
+    host: 'bhqwtlwhr9la38iz8smi-mysql.services.clever-cloud.com',
+    dialect: 'mysql',
     port: 3306,
-  }
-);
+});
 
 sequelize
   .sync()
